@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats Verification</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Uber+Move+Text:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Basic Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Uber Move Text', Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Default text color */
+    line-height: 1.5;
+}
+
+/* --- Header Styling (reused) --- */
+header {
+    background-color: #000000; /* Black background for header */
+    color: #ffffff; /* White text for header */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* --- Main Content and Centering --- */
+main {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding-top: 100px; 
+}
+
+.verification-container {
+    width: 100%;
+    max-width: 400px; /* Max width for the container */
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* --- Text and Links --- */
+.welcome-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.instruction-text {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.mobile-link {
+    font-size: 14px;
+    color: #000000; /* Uber links are usually black */
+    text-decoration: underline;
+    display: block; /* Makes the link take its own line */
+    margin-bottom: 40px;
+}
+
+/* --- Code Input Styling --- */
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the four boxes */
+    margin-bottom: 30px;
+}
+
+.code-box {
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height to make it square */
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    outline: none;
+    caret-color: transparent; /* Hides the blinking cursor for a cleaner look */
+}
+
+.code-box:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Resend/More Options Links --- */
+.resend-link,
+.more-options-link {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #333333;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    text-decoration: none; /* For the 'a' tag (More options) */
+}
+
+.resend-link:disabled {
+    color: #aaaaaa; /* Greyed out when the timer is active */
+    cursor: default;
+}
+
+.more-options-link {
+    color: #000000;
+    font-weight: 500;
+    display: block;
+}
+
+/* --- Navigation Arrows --- */
+.navigation-arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Control max width for better spacing */
+    margin: 60px auto 0; /* Centering and spacing from content */
+}
+
+.nav-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 1px solid #c0c0c0;
+    cursor: pointer;
+    text-decoration: none; /* For the 'a' tag */
+    transition: all 0.2s;
+}
+
+/* Active Back Button (Black) */
+.nav-button.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.nav-button.active:hover {
+    background-color: #333333;
+}
+
+/* Inactive Next Button (Grey/Disabled) */
+.nav-button.inactive {
+    background-color: #f6f6f6;
+    color: #aaaaaa;
+    border-color: #e2e2e2;
+    cursor: default;
+}
+
+/* Making the button next to the arrow text-based */
+.nav-button.inactive {
+    width: auto;
+    border-radius: 4px;
+    padding: 0 20px;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.other {
+    display: block;
+    margin-top: 20px; 
+    margin-left: 200px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Uber Eats</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="verification-container">
+            
+            <h2 class="welcome-title">Welcome back, Eyob.</h2>
+            
+            <p class="instruction-text">
+                Enter the 4-digit code sent via SMS at ******8802.
+            </p>
+
+            <a href="#" class="mobile-link">Changed your mobile number?</a>
+            
+            <form action="#" method="POST" class="code-form">
+                
+                <div class="code-inputs">
+                    <input type="tel" maxlength="1" class="code-box" id="code1" required>
+                    <input type="tel" maxlength="1" class="code-box" id="code2">
+                    <input type="tel" maxlength="1" class="code-box" id="code3">
+                    <input type="tel" maxlength="1" class="code-box" id="code4">
+                </div>
+
+                <button type="button" class="resend-link" disabled>
+                    Resend code via SMS (0:02)
+                </button>
+                
+                <a href="#" class="more-options-link">More options</a>
+                
+            </form>
+
+            <div class="navigation-arrows">
+                <a href="login.html" class="nav-button active">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <button class="nav-button inactive" >
+                    <a href="User/index.html">Next</a> <i class="fa-solid fa-arrow-right"></i>
+                </button>   
+            </div>
+            <div class="other">
+                    <a href=""><p>As Restaurant</p></a>
+                    <a href="Admin/admin.html"><p>As Admin</p></a>
+                </div>
+        </div>
+    </main>
+    <script>
+        const inputs = document.querySelectorAll('.code-box');
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

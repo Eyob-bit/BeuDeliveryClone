@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats Sidebar Clone</title>
+    <style>
+        /* Basic Reset and Layout */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333; /* Dark text for the sidebar */
+    height: 100vh;
+    display: flex;
+}
+
+/* --- Sidebar Container and Positioning --- */
+.sidebar-container {
+height: 100vh; /* Full viewport height */
+position: relative; /* Needed to position the sidebar */
+width: 261px;
+}
+
+.sidebar {
+    position: absolute; /* Allows for precise positioning */
+top: 0;
+left: 0;
+width: 246px; /* Adjust width as needed */
+height: 100%;
+background-color: white; /* Sidebar background color */
+box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional: subtle shadow */
+padding: 20px 0; /* Add top/bottom padding */
+box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+
+a{
+text-decoration: none;
+color: black;
+}
+
+
+/* --- Account Action Buttons --- */
+.account-actions {
+padding: 0 20px 20px 20px;
+border-bottom: 1px solid #e0e0e0; /* Separator line */
+margin-bottom: 20px;
+}
+
+.btn {
+width: 100%;
+padding: 10px;
+margin-bottom: 8px; /* Space between buttons */
+border: none;
+border-radius: 4px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+.btn-primary {
+background-color: black;
+color: white;
+height: 60px;
+}
+
+.btn-primary:hover {
+background-color: #333;
+}
+
+.btn-secondary {
+    height: 60px;
+background-color: white;
+color: black;
+border: 1px solid #e0e0e0; /* Light gray border */
+}
+
+.btn-secondary:hover {
+background-color: #f0f0f0;
+}
+
+/* --- Navigation Links --- */
+.navigation-links {
+display: flex;
+flex-direction: column;
+margin-bottom: auto; /* Push the app links section to the bottom */
+}
+
+.nav-link {
+text-decoration: none; /* Remove underline */
+color: black;
+padding: 10px 20px;
+font-size: 14px;
+display: block; /* Make the link take up the full width */
+}
+
+.nav-link:hover {
+background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* --- App Links Section (Fixed to Bottom) --- */
+.app-links {
+position: absolute; /* Position relative to the sidebar */
+bottom: 20px;
+width: 100%;
+box-sizing: border-box;
+padding: 0 20px;
+}
+
+.app-links p {
+font-size: 12px;
+color: #555; /* Gray text color */
+margin-bottom: 10px;
+}
+
+.app-buttons {
+display: flex;
+gap: 5px; /* Space between the two app buttons */
+}
+
+.app-btn {
+flex-grow: 1; /* Make buttons share space equally */
+padding: 8px 10px;
+border: 1px solid #e0e0e0;
+background-color: white;
+color: black;
+border-radius: 20px; /* Pill-shaped buttons */
+font-size: 12px;
+font-weight: bold;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.app-btn .icon {
+font-size: 14px; /* Adjust icon size */
+margin-right: 4px;
+}
+
+.app-btn:hover {
+background-color: #f0f0f0;
+}
+
+.main-conten {
+    background-size: 100vh;
+}
+
+.background-image {
+    opacity: 60%;
+   background-size: 100vh;
+}
+
+
+
+    </style>
+</head>
+<body>
+   
+        <div class="sidebar-container">
+<div class="sidebar">
+
+<div class="account-actions">
+<button class="btn btn-primary">Sign up</button>
+<a href="Login/login.html"><button class="btn btn-secondary">Log in</button></a>
+</div>
+<div class="navigation-links">
+<a href="#" class="nav-link">Create a business account</a>
+<a href="Add restaurant.html/getStarted.html" class="nav-link">Add your restaurant</a>
+<a href="#" class="nav-link">Sign up to deliver</a>
+<a href="#" class="nav-link">Get a ride</a>
+</div>
+<div class="app-links">
+<p>There's more to love in the app.</p>
+<div class="app-buttons">
+<button class="app-btn">
+<span class="icon">📱</span> iPhone
+</button>
+<button class="app-btn">
+<span class="icon">🤖</span> Android
+</button>
+</div>
+</div>
+</div>
+</div>
+
+        <div class="main-content">
+            <a href="index.html"><img class="background-image" src="images/image.png"></a>
+            </div>
+   
+</body>
+</html>

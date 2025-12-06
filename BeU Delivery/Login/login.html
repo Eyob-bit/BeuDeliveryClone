@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Uber+Move+Text:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Basic Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Uber Move Text', Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Default text color */
+    line-height: 1.5;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #000000; /* Black background for header */
+    color: #ffffff; /* White text for header */
+    height: 60px; /* Standard header height */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* --- Main Content and Centering --- */
+main {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding-top: 100px; /* Space from the header */
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px; /* Max width for the form container */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.prompt {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* --- Form and Input Styling --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+.input-field {
+    padding: 15px 10px;
+    border: 1px solid #c0c0c0; /* Light grey border */
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #000000; /* Darker border on focus */
+}
+
+/* --- Button Styling --- */
+.button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Primary (Continue) Button - Black/Dark */
+.primary-button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background-color: #333333;
+}
+
+/* Secondary (Social/QR) Buttons - Light Grey */
+.secondary-button {
+    background-color: #f6f6f6;
+    color: #000000;
+    border: 1px solid #e2e2e2;
+}
+
+.secondary-button:hover {
+    background-color: #ececec;
+}
+
+/* --- Divider ('or') Styling --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.or-text {
+    padding: 0 15px;
+    font-size: 14px;
+    color: #737373;
+}
+
+/* --- Terms Text Styling --- */
+.terms-text {
+    font-size: 12px;
+    color: #737373;
+    margin-top: 25px;
+    line-height: 1.4;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Uber Eats</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h2 class="prompt">What's your phone number or email?</h2>
+            
+            <form action="#" method="POST">
+                
+                <input type="text" placeholder="Enter phone number or email" class="input-field" required>
+
+                <button type="submit" class="button primary-button">
+                    <a href="login-second.html">Continue</a>
+                </button>
+
+                <div class="divider">
+                    <span class="or-text">or</span>
+                </div>
+
+                <button type="button" class="button secondary-button google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+
+                <button type="button" class="button secondary-button apple">
+                    <i class="fab fa-apple"></i> Continue with Apple
+                </button>
+
+                <div class="divider">
+                    <span class="or-text">or</span>
+                </div>
+
+                <button type="button" class="button secondary-button qr-code">
+                    <i class="fa-solid fa-qrcode"></i> Log in with QR code
+                </button>
+
+            </form>
+
+            <p class="terms-text">
+                By continuing, you agree to calls, including by autodialer, WhatsApp, or texts from Uber and its affiliates.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

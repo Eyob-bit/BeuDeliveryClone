@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats Sidebar Clone</title>
+    <style>
+        /* Basic Reset and Layout */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333; /* Dark text for the sidebar */
+    height: 100vh;
+    display: flex;
+}
+
+.background-image {
+    opacity: 50%;
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 320px; /* Width similar to the image */
+    background-color: #ffffff; /* White background for the sidebar */
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    overflow-y: auto; /* Scrollable if content is long */
+}
+
+/* --- Main Content Styling (Black Background) --- */
+
+
+/* --- User Info Section --- */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.user-name {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.manage-account {
+    color: #008080; /* Teal/blue color for the link */
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* --- Navigation List --- */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.nav-list li a:hover {
+    background-color: #f6f6f6;
+}
+
+.nav-list .icon {
+    margin-right: 10px;
+    font-size: 18px; /* For the emojis */
+}
+
+/* --- Separators --- */
+.divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+/* --- Sign Out Link --- */
+.sign-out {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* --- Business Links --- */
+.business-links a {
+    display: block;
+    padding: 8px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* --- App Promo Section --- */
+.app-promo {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.app-promo .logo img {
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.app-promo p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.app-button {
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    color: #333;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.app-button:hover {
+    background-color: #eee;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <p class="user-name">Eyob</p>
+                    <a href="#" class="manage-account">Manage account</a>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <ul class="nav-list">
+                <li><a href="#"><span class="icon">🛒</span> Orders</a></li>
+                <li><a href="#"><span class="icon">⭐</span> Favorites</a></li>
+                <li><a href="#"><span class="icon">💳</span> Wallet</a></li>
+                <li><a href="#"><span class="icon">❓</span> Help</a></li>
+                <hr class="divider">
+                
+            </ul>
+
+            <hr class="divider">
+
+            <a href="../../index.html"" class="sign-out">Sign out</a>
+
+            <hr class="divider">
+
+            <div class="business-links">
+                <a href="#">Create a business account</a>
+                <a href="#">Add your restaurant</a>
+                <a href="#">Sign up to deliver</a>
+            </div>
+
+            <hr class="divider">
+
+            <div class="app-promo">
+                <div class="logo">
+                    <img src="https://d3i4yxtzktqr9z.cloudfront.net/uber-eats/1d1377a06368d71d374f1d9ccf53531b.svg" alt="Uber Eats Logo">
+                </div>
+                <p>There's more to love in the App</p>
+                <div class="app-links">
+                    <a href="#" class="app-button iphone">iPhone</a>
+                    <a href="#" class="app-button android">Android</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <a href="index.html"><img class="background-image" src="Images/image copy.png"></a>
+            </div>
+    </div>
+</body>
+</html>
