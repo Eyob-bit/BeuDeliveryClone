@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter your mobile number - Uber Eats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        -/* Custom CSS for Uber Eats page look and feel */
+
+/* Global adjustments */
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.next {
+    color: white;
+}
+/* Styling for the large circular back button */
+#backButton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+/* Styling for the next button when disabled (greyed out) */
+.btn-dark:disabled {
+    /* Use a lighter background and border for the disabled look */
+    background-color: #e2e2e2 !important;
+    border-color: #e2e2e2 !important;
+    color: #a0a0a0 !important;
+    opacity: 1; /* Override Bootstrap's default opacity reduction */
+    min-width: 120px;
+    font-weight: bold;
+}
+
+/* --- Mobile Input Group Styling --- */
+
+/* Ensures the flag icons are the correct size */
+.flag-icon {
+    width: 20px;
+    height: auto;
+    border: 1px solid #ccc; /* Adding a subtle border for visibility, similar to the image */
+}
+
+/* Style the custom dropdown button to look like it's part of the input */
+.input-group button.dropdown-toggle {
+    /* Remove default button background/border style */
+    border: 1px solid #ced4da; /* Match input field border */
+    background-color: #fff;
+    border-right: none; /* Make it visually merge with the input */
+    padding-right: 8px; /* Reduce spacing a bit */
+}
+
+/* Style the actual input field next to the dropdown */
+.input-group .form-control {
+    /* Use a slightly taller input field */
+    padding: 10px 15px;
+    border-left: none; /* Make it visually merge with the dropdown button */
+}
+
+/* Fix the border radius on the input group */
+.input-group > :not(:first-child):not(.dropdown-menu):not(.form-floating) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Ensure the full dropdown menu matches the width and look */
+.mobile-dropdown-menu {
+    /* Position and width adjustments for the menu */
+    width: 300px; /* Adjust as needed */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Uber-style subtle shadow */
+    border: 1px solid #ced4da;
+    max-height: 300px; /* Add scroll if too many items */
+    overflow-y: auto;
+}
+
+/* Style for the currently selected/active country in the dropdown (e.g., Ethiopia) */
+.mobile-dropdown-menu .selected-country {
+    background-color: #f7f7f7; /* Lighter background for the default selection */
+}
+
+/* Style for the country currently being hovered/highlighted (e.g., Estonia in the screenshot) */
+.mobile-dropdown-menu .active-country {
+    background-color: #000 !important; /* Black background on hover/focus */
+    color: #fff; /* White text */
+}
+
+/* Ensure the text inside the dropdown item is properly aligned */
+.dropdown-item {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+    </style>
+    </head>
+<body class="bg-light">
+
+    <header class="bg-black text-white py-3">
+        <div class="container-fluid">
+            <span class="h4 ms-3">BeU Delivery</span>
+        </div>
+    </header>
+
+    <main class="container-fluid pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 text-center">
+
+                <h2 class="mb-2">Enter your mobile number</h2>
+                <p class="text-muted mb-5">(Optional)</p>
+                <p class="text-muted mb-5 small">Add your mobile to aid in account recovery</p>
+
+                <form>
+                    <div class="text-start mb-2">
+                        <label for="mobileNumber" class="form-label">Mobile</label>
+                    </div>
+
+                    <div class="input-group mb-3 custom-mobile-input">
+                        <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://flagcdn.com/w20/et.png" alt="Ethiopia Flag" class="me-2 flag-icon">
+                            </button>
+                        
+                        <ul class="dropdown-menu dropdown-menu-start mobile-dropdown-menu">
+                            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/sv.png" alt="El Salvador" class="me-2 flag-icon"> El Salvador
+                                <span class="ms-auto">+503</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/gq.png" alt="Equatorial Guinea" class="me-2 flag-icon"> Equatorial Guinea (Equatorial)
+                                <span class="ms-auto">+240</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/er.png" alt="Eritrea" class="me-2 flag-icon"> Eritrea
+                                <span class="ms-auto">+291</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center active-country">
+                                <img src="https://flagcdn.com/w20/ee.png" alt="Estonia" class="me-2 flag-icon"> Estonia (Eesti)
+                                <span class="ms-auto">+372</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center selected-country">
+                                <img src="https://flagcdn.com/w20/et.png" alt="Ethiopia" class="me-2 flag-icon"> Ethiopia
+                                <span class="ms-auto">+251</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/fk.png" alt="Falkland Islands" class="me-2 flag-icon"> Falkland Islands (Islas Malvinas)
+                                <span class="ms-auto">+500</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/fo.png" alt="Faroe Islands" class="me-2 flag-icon"> Faroe Islands (Føroyar)
+                                <span class="ms-auto">+298</span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/fj.png" alt="Fiji" class="me-2 flag-icon"> Fiji
+                                <span class="ms-auto">+679</span>
+                            </li>
+                             <li class="dropdown-item d-flex justify-content-between align-items-center">
+                                <img src="https://flagcdn.com/w20/fi.png" alt="Finland" class="me-2 flag-icon"> Finland (Suomi)
+                                <span class="ms-auto">+358</span>
+                            </li>
+                        </ul>
+                        
+                        <input type="text" class="form-control" id="mobileNumber" placeholder="Mobile number">
+                    </div>
+                    
+                    <div class="text-start mb-5">
+                        <a href="#" class="text-decoration-none text-dark skip-link">Skip</a>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center nav-buttons">
+                        
+                        <a href="full-name.html">
+                            <button type="button" class="btn btn-outline-dark rounded-circle" id="backButton">
+                            &leftarrow;
+                        </button>
+                        </a>
+                        
+                        <button type="submit" class="btn btn-dark rounded-pill py-2 px-5 d-flex align-items-center" >
+                            <a class="next" href="agreement.html">Next </a>
+                            <span class="ms-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's your name? - Uber Eats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Custom CSS for Uber Eats page look and feel */
+
+/* Global adjustments */
+body {
+    /* Set a clean font, similar to the screenshot */
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Styling for the large circular back button */
+#backButton {
+    /* Set a fixed size for the circular button */
+    width: 50px;
+    height: 50px;
+    /* Center the content (the arrow) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Make the border a bit thicker */
+    border: 1px solid #000;
+    /* Remove default background on hover/focus if needed */
+}
+
+/* Ensure the arrow inside the back button is visible and sized correctly */
+#backButton:hover {
+    color: #000; /* Keep text color black on hover */
+    background-color: transparent; /* Keep background transparent on hover */
+}
+
+/* Style for the input fields to match the look */
+.form-control {
+    /* Use a slightly taller input field */
+    padding: 10px 15px;
+}
+
+/* Style for the disabled Last Name field to match the grey/light look */
+#lastName {
+    /* The Bootstrap `bg-light` class is used in the HTML to give it the light grey background */
+    color: #6c757d; /* Grey text color for the disabled look */
+    /* Remove the default disabled outline */
+    opacity: 1; /* Override Bootstrap's default opacity reduction for disabled fields */
+}
+
+/* Style for the Next button to ensure it looks like the screenshot (rounded pill, black background) */
+.btn-dark {
+    min-width: 120px; /* Give it enough width */
+    font-weight: bold;
+}
+    </style>
+    </head>
+<body class="bg-light">
+
+    <header class="bg-black text-white py-3">
+        <div class="container-fluid">
+            <span class="h4 ms-3">BeU Delivery</span>
+        </div>
+    </header>
+
+    <main class="container-fluid pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 text-center">
+
+                <h2 class="mb-2">What's your name?</h2>
+                <p class="text-muted mb-5">Let us know how to properly address you</p>
+
+                <form>
+                    <div class="mb-3 text-start">
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                    </div>
+
+                    <div class="mb-5 text-start">
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control bg-light" id="lastName" placeholder="Enter last name" >
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-5">
+                        
+                        <a href="signup-2.html">
+                            <button type="button" class="btn btn-outline-dark rounded-circle" id="backButton">
+                                &leftarrow;
+                            </button>
+                        </a>
+                        
+                        <button type="submit" class="btn btn-dark rounded-pill py-2 px-5 d-flex align-items-center">
+                            <a href="Phone-num.html">Next</a> 
+                            <span class="ms-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

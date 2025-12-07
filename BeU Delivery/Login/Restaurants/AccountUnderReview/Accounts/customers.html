@@ -117,10 +117,6 @@
             align-items: center;
         }
         
-        .header-alert p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
         
         .btn-continue {
             background-color: black;
@@ -175,6 +171,58 @@
             opacity: 0.7;
             margin-top: -30px;
         }
+
+        .food-section {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f8f8f8;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .food-section h3 {
+      margin: 0 0 10px;
+      color: black;
+    }
+
+    .food-section p {
+      margin: 0 0 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+        .form-box {
+            margin: 30px;
+            margin-left: 31%;
+      max-width: 600px; 
+      width: 100%;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      background: white;
+    }
+
+    .form-box input[type="text"], 
+    .form-box input[type="tel"], 
+    .form-box input[type="email"], 
+    .form-box input[type="number"],
+    .form-box select,
+    .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    }
+
+    .form-box label {
+      display: block; /* Ensures labels are on their own line */
+      margin-top: 1px;
+      font-weight: bold;
+      color: #333;
+    }
+    
 
         /* Task Lists */
         .task-section-title {
@@ -246,107 +294,46 @@
     <div class="top-bar d-none d-sm-flex">
         <span class="text-dark small fw-bold me-4">Ethio Chef - 1401 S Main St, Kannapolis, US</span>
         <a href="#" class="top-bar-link">Help</a>
-        <a href="#" class="top-bar-link">Log Out</a>
+        <a href="../../../../../index.html" class="top-bar-link">Log Out</a>
     </div>
     
     <div class="dashboard-wrapper">
         <div class="sidebar">
-            <div class="uber-logo">Uber Eats</div>
+            <div class="uber-logo">BeU Delivery</div>
             
             <div class="store-dropdown">
                 Store
                 <div class="d-flex justify-content-between align-items-center">
-                    **Ethio Chef** <i class="bi bi-chevron-down"></i>
+                    Ethio Chef <i class="bi bi-chevron-down"></i>
                 </div>
             </div>
 
-            <a href="#" class="nav-item active"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a href="AccountUnderReview.html" class="nav-item"><i class="bi bi-house-door-fill"></i> Home</a>
             
-            <div class="nav-section-title">Operations</div>
-            <a href="#" class="nav-item"><i class="bi bi-shop"></i> Stores</a>
-            <a href="#" class="nav-item"><i class="bi bi-box-seam"></i> Orders</a>
-            <a href="#" class="nav-item"><i class="bi bi-bar-chart-fill"></i> Performance</a>
+            
+            <a href="addFood.html" class="nav-item "><i class="bi bi-shop"></i> Add Food</a>
+            <a href="performance.html" class="nav-item"><i class="bi bi-bar-chart-fill"></i> Performance</a>
 
-            <div class="nav-section-title">Growth</div>
-            <a href="#" class="nav-item"><i class="bi bi-people-fill"></i> Customers</a>
-            <a href="#" class="nav-item"><i class="bi bi-file-earmark-bar-graph-fill"></i> Reports</a>
-            <a href="#" class="nav-item"><i class="bi bi-megaphone-fill"></i> Ads</a>
-            <a href="#" class="nav-item"><i class="bi bi-tag-fill"></i> Offers</a>
-            <a href="#" class="nav-item"><i class="bi bi-currency-dollar"></i> Marketing</a>
+            
+            <a href="customers.html" class="nav-item active"><i class="bi bi-people-fill"></i> Customers</a>
+            <a href="reports.html" class="nav-item"><i class="bi bi-file-earmark-bar-graph-fill"></i> Reports</a>
+            
 
-            <div class="nav-section-title">Admin</div>
-            <a href="#" class="nav-item"><i class="bi bi-list-task"></i> Menu</a>
-            <a href="#" class="nav-item"><i class="bi bi-wallet-fill"></i> Payments</a>
-            <a href="#" class="nav-item"><i class="bi bi-person-circle"></i> Users</a>
-            <a href="#" class="nav-item"><i class="bi bi-gear-fill"></i> Settings</a>
-            <a href="#" class="nav-item"><i class="bi bi-truck"></i> Uber Direct</a>
+            <a href="menu.html" class="nav-item"><i class="bi bi-list-task"></i> Menu</a>
+            <a href="payments.html" class="nav-item"><i class="bi bi-wallet-fill"></i> Payments</a>
+            <a href="users.html" class="nav-item"><i class="bi bi-person-circle"></i> Users</a>
+            <a href="settings.html" class="nav-item"><i class="bi bi-gear-fill"></i> Settings</a>
         </div>
         
         <div class="main-content">
-            
-            <div class="header-alert">
-                <p class="text-dark">Finish setup for **2 stores**</p>
-                <a href="AfterReview.html" class="btn-continue">Continue</a>
-            </div>
 
-            <div class="review-status-box">
-                <div class="review-text">
-                    <h1>Your store is under review, Eyob</h1>
-                    <p>In the meantime, you can preview what's to come.</p>
-                    <div class="review-store-card">Ethio Chef</div>
-                </div>
-                <div class="review-image">
-                    </div>
-            </div>
-
-            <div class="task-section-title">
-                Ready for you 
-                <span class="task-section-count">0 tasks</span>
-            </div>
-
-            <div class="task-section-title">
-                Coming up
-                <span class="task-section-count">2 tasks</span>
-                <i class="bi bi-chevron-down"></i>
+            <div class="add-section">
+                <form class="form-box">
+                <div class="food-section">
+                    <h3 style="margin-left: 60px;">You will Access After Review</h3>
             </div>
             
-            <div class="task-list-item">
-                <div class="task-left">
-                    <div class="task-icon"><i class="bi bi-search"></i></div>
-                    <div class="task-details">
-                        <h6>Review menu</h6>
-                        <p>Make sure your menu is detailed and accurate for your customers.</p>
-                    </div>
-                </div>
-                <div class="task-status">Pending</div>
-            </div>
-
-            <div class="task-list-item">
-                <div class="task-left">
-                    <div class="task-icon"><i class="bi bi-image-fill"></i></div>
-                    <div class="task-details">
-                        <h6>Upload item photos</h6>
-                        <p>Even if you have already signed up for a photoshoot, more photos attract more customers.</p>
-                    </div>
-                </div>
-                <div class="task-status">Pending</div>
-            </div>
-
-            <div class="task-section-title" style="margin-top: 40px;">
-                Completed
-                <span class="task-section-count">1 tasks</span>
-                <i class="bi bi-chevron-down"></i>
-            </div>
-            
-            <div class="task-list-item task-completed">
-                <div class="task-left">
-                    <div class="task-icon"><i class="bi bi-check-circle-fill"></i></div>
-                    <div class="task-details">
-                        <h6>Initial Setup</h6>
-                        <p>All mandatory setup steps were submitted.</p>
-                    </div>
-                </div>
-                <div class="task-status">Submitted</div>
+            </form>
             </div>
 
         </div>

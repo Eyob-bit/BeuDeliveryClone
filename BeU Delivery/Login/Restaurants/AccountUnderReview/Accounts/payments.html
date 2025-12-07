@@ -218,22 +218,11 @@
 
     .form-box label {
       display: block; /* Ensures labels are on their own line */
-      margin-top: 10px;
+      margin-top: 1px;
       font-weight: bold;
       color: #333;
     }
     
-    .form-box button[type="submit"] {
-        width: 100%;
-        padding: 15px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
 
         /* Task Lists */
         .task-section-title {
@@ -305,35 +294,35 @@
     <div class="top-bar d-none d-sm-flex">
         <span class="text-dark small fw-bold me-4">Ethio Chef - 1401 S Main St, Kannapolis, US</span>
         <a href="#" class="top-bar-link">Help</a>
-        <a href="#" class="top-bar-link">Log Out</a>
+        <a href="../../../../../index.html" class="top-bar-link">Log Out</a>
     </div>
     
     <div class="dashboard-wrapper">
         <div class="sidebar">
-            <div class="uber-logo">Uber Eats</div>
+            <div class="uber-logo">BeU Delivery</div>
             
             <div class="store-dropdown">
                 Store
                 <div class="d-flex justify-content-between align-items-center">
-                    **Ethio Chef** <i class="bi bi-chevron-down"></i>
+                    Ethio Chef <i class="bi bi-chevron-down"></i>
                 </div>
             </div>
 
-            <a href="AfterReview.html" class="nav-item"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a href="AccountUnderReview.html" class="nav-item"><i class="bi bi-house-door-fill"></i> Home</a>
             
             
-            <a href="#" class="nav-item active"><i class="bi bi-shop"></i> Add Food</a>
-            <a href="#" class="nav-item"><i class="bi bi-bar-chart-fill"></i> Performance</a>
+            <a href="addFood.html" class="nav-item "><i class="bi bi-shop"></i> Add Food</a>
+            <a href="performance.html" class="nav-item"><i class="bi bi-bar-chart-fill"></i> Performance</a>
 
             
-            <a href="#" class="nav-item"><i class="bi bi-people-fill"></i> Customers</a>
-            <a href="#" class="nav-item"><i class="bi bi-file-earmark-bar-graph-fill"></i> Reports</a>
+            <a href="customers.html" class="nav-item"><i class="bi bi-people-fill"></i> Customers</a>
+            <a href="reports.html" class="nav-item"><i class="bi bi-file-earmark-bar-graph-fill"></i> Reports</a>
             
 
-            <a href="#" class="nav-item"><i class="bi bi-list-task"></i> Menu</a>
-            <a href="#" class="nav-item"><i class="bi bi-wallet-fill"></i> Payments</a>
-            <a href="#" class="nav-item"><i class="bi bi-person-circle"></i> Users</a>
-            <a href="#" class="nav-item"><i class="bi bi-gear-fill"></i> Settings</a>
+            <a href="menu.html" class="nav-item"><i class="bi bi-list-task"></i> Menu</a>
+            <a href="payments.html" class="nav-item active"><i class="bi bi-wallet-fill"></i> Payments</a>
+            <a href="users.html" class="nav-item"><i class="bi bi-person-circle"></i> Users</a>
+            <a href="settings.html" class="nav-item"><i class="bi bi-gear-fill"></i> Settings</a>
         </div>
         
         <div class="main-content">
@@ -341,36 +330,9 @@
             <div class="add-section">
                 <form class="form-box">
                 <div class="food-section">
-                    <h3>Add Food Item</h3>
-                    <p>Enter details about the food your restaurant provides</p>
-
-                    <label>Food Name</label>
-                    <input type="text" placeholder="e.g. Burger, Firfir, Pizza" required>
-
-                    <label>Food Description</label>
-                    <textarea placeholder="Describe the food, ingredients, taste, etc." rows="4" required></textarea>
-
-                    <label>Food Price</label>
-                    <input type="number" placeholder="Enter price (ETB)" required>
-
-                    <label>Food Category</label>
-                    <select required>
-                    <option>Main Dish</option>
-                    <option>Fast Food</option>
-                    <option>Ethiopian</option>
-                    <option>Drinks</option>
-                    <option>Dessert</option>
-                    <option>Breakfast</option>
-                    </select>
-
-                    <label>Upload Food Image</label>
-                    <input type="file" accept="image/*" required>
-                    <input type="file" accept="image/*" required>
-                    <input type="file" accept="image/*" required>
+                    <h3 style="margin-left: 60px;">You will Access After Review</h3>
             </div>
-            <button type="submit">
-                <a href="submit.html" style="color: white; text-decoration: none;">Submit Registration</a>
-            </button>
+            
             </form>
             </div>
 
