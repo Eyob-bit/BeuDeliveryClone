@@ -318,21 +318,129 @@
             
             
 
-            <a href="AfterReview.html" class="nav-item"><i class="bi bi-house-door-fill"></i> Dashboard</a>
+            <a href="#" class="nav-item active"><i class="bi bi-house-door-fill"></i> Dashboard</a>
             
             
-            <a href="#" class="nav-item"><i class="bi bi-person-circle"></i> Users</a>
+            <a href="user.html" class="nav-item"><i class="bi bi-person-circle"></i> Users</a>
 
             
             <a href="#" class="nav-item"><i class="bi bi-people-fill"></i> Restaurants</a>
             <a href="food-added.html" class="nav-item"><i class="bi bi-file-earmark-bar-graph-fill"></i>Food Added <i id="curve-dropdown" class="bi bi-chevron-down"></i></a>
 
             <a href="#" class="nav-item"><i class="bi bi-wallet-fill"></i> Payments</a>
-            <a href="#" class="nav-item"><i class="bi bi-person-circle"></i> Reports</a>
+            <a href="#" class="nav-item"><i class="bi bi-person-circle"></i> Delivery Registration</a>
             <a href="#" class="nav-item"><i class="bi bi-gear-fill"></i> Settings</a>
         </div>
         
-        
+        <div>
+            <div class="main-content">
+
+    <h2 class="fw-bold mb-3">Dashboard</h2>
+    <p class="text-muted mb-4">Dashboard</p>
+
+    <!-- TOP CARDS -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Primary Card</h5>
+                    <a href="#" class="text-white">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-dark" style="background:#ffc107;">
+                <div class="card-body">
+                    <h5 class="card-title">Warning Card</h5>
+                    <a href="#" class="text-dark">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-success shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Success Card</h5>
+                    <a href="#" class="text-white">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-danger shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Danger Card</h5>
+                    <a href="#" class="text-white">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHARTS -->
+    <div class="row mb-4">
+        <div class="col-lg-8 mb-3">
+            <div class="card">
+                <div class="card-header fw-bold">Area Chart Example</div>
+                <div class="card-body">
+                    <img src="https://quickchart.io/chart?c={
+                      type:'line',
+                      data:{labels:['Mar 1','Mar 3','Mar 5','Mar 7','Mar 9','Mar 11','Mar 13'],
+                      datasets:[{label:'Revenue',data:[10000,30000,25000,35000,30000,35000,40000],fill:true}]} 
+                    }"
+                    class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-3">
+            <div class="card">
+                <div class="card-header fw-bold">Bar Chart Example</div>
+                <div class="card-body">
+                    <img src="https://quickchart.io/chart?c={
+                      type:'bar',
+                      data:{labels:['Jan','Feb','Mar','Apr','May','Jun'],
+                      datasets:[{label:'Orders',data:[4000,5000,7000,9000,11000,15000]}]}
+                    }"
+                    class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="card mb-5">
+        <div class="card-header fw-bold">DataTable Example</div>
+        <div class="card-body">
+
+            <table class="table table-striped table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr><td>Tiger Nixon</td><td>System Architect</td><td>Edinburgh</td><td>61</td><td>2011/04/25</td><td>$320,800</td></tr>
+                    <tr><td>Garrett Winters</td><td>Accountant</td><td>Tokyo</td><td>63</td><td>2011/07/25</td><td>$170,750</td></tr>
+                    <tr><td>Ashton Cox</td><td>Junior Technical Author</td><td>San Francisco</td><td>66</td><td>2009/01/12</td><td>$86,000</td></tr>
+                    <tr><td>Cedric Kelly</td><td>Senior Javascript Developer</td><td>Edinburgh</td><td>22</td><td>2012/03/29</td><td>$433,060</td></tr>
+                    <tr><td>Airi Satou</td><td>Accountant</td><td>Tokyo</td><td>33</td><td>2008/11/28</td><td>$162,700</td></tr>
+                    <tr><td>Brielle Williamson</td><td>Integration Specialist</td><td>New York</td><td>61</td><td>2012/12/02</td><td>$372,000</td></tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

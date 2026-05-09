@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up for Delivery - beU Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+        header a {
+            text-decoration: none;
+            margin-left: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            background: black;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #291f19;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="../index.html" id="logo">beU Delivery</a>
+    </div>
+
+</header>
+
+<div class="container">
+    <h2>Sign Up to Become a Delivery Partner</h2>
+
+    <form action="delivery-signup-success.html">
+        
+        <label>Full Name</label>
+        <input type="text" name="fullname" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email">
+
+        <label>Kebele / ID Card Upload</label>
+        <input type="file" name="idcard" required>
+
+        <label>City</label>
+        <input type="text" name="city" placeholder="Addis Ababa" required>
+
+        <label>Vehicle Type</label>
+        <select name="vehicle" required>
+            <option>Motorcycle</option>
+            <option>Bicycle</option>
+            <option>Car</option>
+        </select>
+
+        <label>Plate Number</label>
+        <input type="text" name="plate" required>
+
+        <a href="delivery-signup-success.html"><button type="submit">Submit Application</button></a>
+    </form>
+</div>
+
+</body>
+</html>
+ 

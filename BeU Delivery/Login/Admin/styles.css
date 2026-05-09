@@ -1,0 +1,138 @@
+/* --- GENERAL LAYOUT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+
+        /* -----------------------
+           Header / Top Bar 
+           ----------------------- */
+        .top-bar {
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .top-bar-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-left: 20px;
+        }
+
+        .section {
+            display: inline-block;
+            width: 100%;
+        }
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 240px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+    background: #f0f0f0;
+}
+
+.sidebar .submenu {
+    margin-left: 20px;
+    display: none;
+}
+
+.sidebar .submenu li {
+    font-size: 14px;
+}
+
+/* --- TOPBAR --- */
+.topbar {
+    height: 60px;
+    
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    margin-left: 240px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.topbar a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.topbar a:hover {
+    color: #ff6600;
+}
+
+/* --- CONTENT AREA --- */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+}
+
+/* Simple table style for admin pages */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.table th {
+    background: #f7f7f7;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}

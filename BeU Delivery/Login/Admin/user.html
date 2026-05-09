@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="section">
+        <!-- TOPBAR -->
+    <header class="topbar">
+        <span>Ethio Chef - Admin Panel</span>
+        <a href="#">Help</a>
+        <a href="login.html">Log Out</a>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Admin</h2>
+        <ul>
+            <a href="admin.html"><li>Dashboard</li></a>
+            <a href="admin-users.html"><li class="active">Users</li></a>
+            <a href="admin-restaurants.html"><li>Restaurants</li></a>
+
+            <li onclick="toggleMenu()">Food Added ▼</li>
+            <ul id="submenu" class="submenu" style="display:block;">
+                <a href="admin-food-pending.html"><li>Pending</li></a>
+                <a href="admin-food-spam.html"><li>Spam</li></a>
+                <a href="admin-food-approved.html"><li>Approved</li></a>
+            </ul>
+
+            <a href="admin-payments.html"><li>Payments</li></a>
+            <a href="admin-delivery-registration.html"><li>Delivery Registration</li></a>
+            <a href="admin-settings.html"><li>Settings</li></a>
+        </ul>
+    </aside>
+    
+
+    
+
+    <!-- CONTENT -->
+    <main class="content">
+        <h1 class="section-title">Users</h1>
+
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Type</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Abel Mekonen</td>
+                <td>0911223344</td>
+                <td>Customer</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Hanna Saba</td>
+                <td>0922334455</td>
+                <td>Delivery</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Michael T.</td>
+                <td>0933445566</td>
+                <td>Customer</td>
+                <td>Active</td>
+            </tr>
+        </table>
+    </main>
+</section>
+    <script>
+        function toggleMenu() {
+            const submenu = document.getElementById("submenu");
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
